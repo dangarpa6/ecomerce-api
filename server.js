@@ -1,8 +1,9 @@
 const app = require("./app");
 const initModel = require("./models/initModel");
 const db = require("./utils/database");
+require('dotenv').config();
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 db.authenticate()
   .then(() => {
