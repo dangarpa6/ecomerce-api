@@ -21,6 +21,10 @@ db.sync({ force: false })
     console.error("[!] Unable to synchronize the database:", error);
   });
 
+  app.get("/", (req, res) => {
+    res.send("server working")
+    });
+
 initModel();
 
 app.listen(PORT, () => {
